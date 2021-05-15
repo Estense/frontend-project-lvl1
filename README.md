@@ -5,4 +5,4 @@
 
 [![Linter](https://github.com/niramov/frontend-project-lvl1/actions/workflows/node.js.yml/badge.svg)](https://github.com/Estense/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
-https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl
+<a href="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl" target="_blank"><img src="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl.svg" /></a>
