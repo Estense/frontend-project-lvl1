@@ -13,3 +13,6 @@
 
 ## brain-gcd
 <a href="https://asciinema.org/a/09ABe5D4HN5qzEodNBjV0PGfd" target="_blank"><img src="https://asciinema.org/a/09ABe5D4HN5qzEodNBjV0PGfd.svg" width="266" height="200"/></a>
+
+## brain-progression
+<a href="https://asciinema.org/a/Bg4IOTD4yM4PxolDMwKcP4vES" target="_blank"><img src="https://asciinema.org/a/Bg4IOTD4yM4PxolDMwKcP4vES.svg" width="266" height="200"/></a>

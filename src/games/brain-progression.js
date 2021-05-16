@@ -5,7 +5,7 @@ export const gameRules = 'What number is missing in the progression?';
 export const gameData = () => {
   const step = _.random(1, 10);
   let num1 = _.random(1, 100);
-  const length = _.random(5, 10);
+  const length = _.random(5, 9);
   const num2 = _.random(0, length);
   const result = [];
   let rightAnswer = 0;
