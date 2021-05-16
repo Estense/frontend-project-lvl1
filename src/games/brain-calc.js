@@ -23,4 +23,5 @@ export const gameData = () => {
   return arr;
 };
 
-game(gameRules, gameData);
+const brainCalc = () => game(gameRules, gameData);
+export default brainCalc;
