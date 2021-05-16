@@ -6,4 +6,7 @@
 [![Linter](https://github.com/Estense/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Estense/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
 ## brain-even
-<a href="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl" target="_blank"><img src="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl.png" /></a>
+<a href="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl" target="_blank"><img src="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl.svg" width="266" height="200"/></a>
+
+## brain-calc
+<a href="https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx" target="_blank"><img src="https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx.svg" width="266" height="200"/></a>
