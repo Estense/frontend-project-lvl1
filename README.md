@@ -10,5 +10,3 @@
 
 ## brain-calc
 <a href="https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx" target="_blank"><img src="https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx.svg" width="266" height="200"/></a>
-
-[![asciicast](https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx.svg)](https://asciinema.org/a/IwyXErCOtXF1fjjkodEQU5Zzx)
