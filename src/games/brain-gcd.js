@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import game from '../index.js';
+import generateGame from '../index.js';
 
-export const gameRules = 'Find the greatest common divisor of given numbers.';
-export const gameData = () => {
+export const gameDescription = 'Find the greatest common divisor of given numbers.';
+export const getData = () => {
   const num1 = _.random(1, 100);
   const num2 = _.random(1, 100);
   const randomNum = `${num1} ${num2}`;
@@ -16,9 +16,8 @@ export const gameData = () => {
       rightAnswer = i;
     }
   }
-  const arr = [rightAnswer.toString(), randomNum];
-  return arr;
+  return [rightAnswer.toString(), randomNum];
 };
 
-const brainGcd = () => game(gameRules, gameData);
+const brainGcd = () => generateGame(gameDescription, getData);
 export default brainGcd;

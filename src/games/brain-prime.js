@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import game from '../index.js';
+import generateGame from '../index.js';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const gameData = () => {
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const getData = () => {
   const num = _.random(0, 1000);
   let rightAnswer = 'yes';
   if ((num === 1) || (num === 0)) {
@@ -13,9 +13,8 @@ const gameData = () => {
       rightAnswer = 'no';
     }
   }
-  const arr = [rightAnswer.toString(), num];
-  return arr;
+  return [rightAnswer.toString(), num];
 };
 
-const brainPrime = () => game(gameRules, gameData);
+const brainPrime = () => generateGame(gameDescription, getData);
 export default brainPrime;

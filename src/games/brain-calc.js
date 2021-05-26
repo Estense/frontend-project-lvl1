@@ -1,27 +1,36 @@
 import _ from 'lodash';
-import game from '../index.js';
+import generateGame from '../index.js';
 
-export const gameRules = 'What is the result of the expression?';
-export const gameData = () => {
-  const symbols = ['+', '-', '*'];
-  const randomSymbol = _.random(0, 2);
-  const num1 = _.random(1, 10);
-  const num2 = _.random(1, 10);
-  const randomNum = `${num1} ${symbols[randomSymbol]} ${num2}`;
+const gameDescription = 'What is the result of the expression?';
+
+const getRightAnswer = (randomSymbol, first, last, symbols) => {
   let rightAnswer = 0;
   switch (randomSymbol) {
     case 0:
-      rightAnswer = num1 + num2;
+      rightAnswer = first + last;
       break;
     case 1:
-      rightAnswer = num1 - num2;
+      rightAnswer = first - last;
+      break;
+    case 2:
+      rightAnswer = first * last;
       break;
     default:
-      rightAnswer = num1 * num2;
+      throw new Error(`Unknown expression: '${symbols[randomSymbol]}'!`);
   }
-  const arr = [rightAnswer.toString(), randomNum];
-  return arr;
+  return rightAnswer;
 };
 
-const brainCalc = () => game(gameRules, gameData);
+const getData = () => {
+  const symbols = ['+', '-', '*'];
+  const randomSymbol = _.random(0, symbols.length - 1);
+  const num1 = _.random(1, 10);
+  const num2 = _.random(1, 10);
+  const expression = `${num1} ${symbols[randomSymbol]} ${num2}`;
+  const rightAnswer = getRightAnswer(randomSymbol, num1, num2, symbols);
+
+  return [rightAnswer.toString(), expression];
+};
+
+const brainCalc = () => generateGame(gameDescription, getData);
 export default brainCalc;
