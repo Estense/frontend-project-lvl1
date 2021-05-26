@@ -21,7 +21,6 @@ export const getData = () => {
   const rightAnswer = prog[num2];
   prog[num2] = '..';
   const randomNum = prog.join(' ');
-  console.log(prog.length, num2, length, rightAnswer);
   return [rightAnswer.toString(), randomNum];
 };
 
