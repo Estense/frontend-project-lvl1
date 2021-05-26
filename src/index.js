@@ -15,7 +15,7 @@ const generateGame = (gameDescription, getData) => {
     if (answer === rightAnswer) {
       counter += 1;
     } else {
-      return `'${answer}' is wrong answer, right answer was '${rightAnswer}'\nLet's try again ${playerName}.`;
+      return `'${answer}' is wrong answer, right answer was '${rightAnswer}'\nLet's try again, ${playerName}!`;
     }
   }
   return `Congratulations, ${playerName}!`;
