@@ -18,7 +18,7 @@ const generateGame = (gameDescription, getData) => {
       return `'${answer}' is wrong answer, right answer was '${rightAnswer}'\nLet's try again ${playerName}.`;
     }
   }
-  return `Congratulations ${playerName}`;
+  return `Congratulations, ${playerName}!`;
 };
 
 export default generateGame;
