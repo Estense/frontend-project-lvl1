@@ -16,7 +16,9 @@
 
 5.     $ npm link
 
-6. choose one of these games and type
+6.     Set-ExecutionPolicy -ExecutionPolicy Bypass (only for PowerShell)
+
+7. choose one of these games and type
      $ brain-even
 or something listed below
 
