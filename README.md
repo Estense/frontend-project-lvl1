@@ -11,8 +11,8 @@
 2.     $ git clone https://github.com/Estense/frontend-project-lvl1.git
 
 3. choose one of these games and type
-    $ brain-even
-or something
+     $ brain-even
+or something listed below
 
 ## brain-even
 <a href="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl" target="_blank"><img src="https://asciinema.org/a/Un5jmKwzwQmZiOiC3a4Ww6apl.svg" width="266" height="200"/></a>

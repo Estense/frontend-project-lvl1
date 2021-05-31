@@ -7,7 +7,7 @@ const askPlayerName = () => {
 
 const sayHello = () => {
   console.log('Welcome to the Brain Games!');
-  const name = askPlayerName()
+  const name = askPlayerName();
   console.log(`Hello, ${name}!`);
   return name;
 };
