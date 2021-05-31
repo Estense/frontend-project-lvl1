@@ -1,24 +1,20 @@
 import readlineSync from 'readline-sync';
+import sayHello from './cli.js';
 
 // Games engine
-const gameCounter = 3;
+const roundCounter = 3;
 const generateGame = (gameDescription, getData) => {
-  console.log('Welcome to the Brain Games!');
-  const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}`);
+  const playerName = sayHello();
   console.log(gameDescription);
-  let counter = 0;
-  while (counter < gameCounter) {
-    const data = getData();
-    const [rightAnswer, randomNum] = data;
-    const answer = readlineSync.question(`Question: ${randomNum}\n`);
-    if (answer === rightAnswer) {
-      counter += 1;
-    } else {
-      return `'${answer}' is wrong answer, right answer was '${rightAnswer}'\nLet's try again, ${playerName}!`;
+  for (let i = 0; i < roundCounter; i += 1) {
+    const [rightAnswer, questionBody] = getData();
+    const answer = readlineSync.question(`Question: ${questionBody}\n`);
+    if (answer !== rightAnswer) {
+      console.log(`'${answer}' is wrong answer, right answer was '${rightAnswer}'\nLet's try again, ${playerName}!`);
+      return;
     }
   }
-  return `Congratulations, ${playerName}!`;
+  console.log(`Congratulations, ${playerName}!`);
 };
 
 export default generateGame;

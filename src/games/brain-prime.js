@@ -2,17 +2,22 @@ import _ from 'lodash';
 import generateGame from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const getData = () => {
-  const num = _.random(0, 1000);
-  let rightAnswer = 'yes';
-  if ((num === 1) || (num === 0)) {
-    rightAnswer = 'no';
+
+const isPrime = (num) => {
+  if (num <= 1) {
+    return 'no';
   }
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      rightAnswer = 'no';
+      return 'no';
     }
   }
+  return 'yes';
+};
+
+const getData = () => {
+  const num = _.random(0, 1000);
+  const rightAnswer = isPrime(num);
   return [rightAnswer.toString(), num];
 };
 

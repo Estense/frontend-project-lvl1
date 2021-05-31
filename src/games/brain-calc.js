@@ -3,33 +3,27 @@ import generateGame from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const getRightAnswer = (randomSymbol, first, last, symbols) => {
-  let rightAnswer = 0;
-  switch (randomSymbol) {
-    case 0:
-      rightAnswer = first + last;
-      break;
-    case 1:
-      rightAnswer = first - last;
-      break;
-    case 2:
-      rightAnswer = first * last;
-      break;
+const getRightAnswer = (operator, operand1, operand2) => {
+  switch (operator) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '*':
+      return operand1 * operand2;
     default:
-      throw new Error(`Unknown expression: '${symbols[randomSymbol]}'!`);
+      throw new Error(`Unknown expression: '${operator}'!`);
   }
-  return rightAnswer;
 };
 
 const getData = () => {
   const symbols = ['+', '-', '*'];
-  const randomSymbol = _.random(0, symbols.length - 1);
-  const num1 = _.random(1, 10);
-  const num2 = _.random(1, 10);
-  const expression = `${num1} ${symbols[randomSymbol]} ${num2}`;
-  const rightAnswer = getRightAnswer(randomSymbol, num1, num2, symbols);
-
-  return [rightAnswer.toString(), expression];
+  const randomSymbol = _.sample(symbols);
+  const operand1 = _.random(1, 10);
+  const operand2 = _.random(1, 10);
+  const expression = `${operand1} ${randomSymbol} ${operand2}`;
+  const rightAnswer = getRightAnswer(randomSymbol, operand1, operand2).toString();
+  return [rightAnswer, expression];
 };
 
 const brainCalc = () => generateGame(gameDescription, getData);
