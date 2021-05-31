@@ -10,7 +10,11 @@
 
 2.     $ git clone https://github.com/Estense/frontend-project-lvl1.git
 
-3. choose one of these games and type
+3.     npm install make -g
+
+4.     npm link
+
+5. choose one of these games and type
      $ brain-even
 or something listed below
 
