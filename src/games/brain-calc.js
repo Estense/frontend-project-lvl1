@@ -26,5 +26,4 @@ const getData = () => {
   return [rightAnswer, expression];
 };
 
-const brainCalc = () => generateGame(gameDescription, getData);
-export default brainCalc;
+export default () => generateGame(gameDescription, getData);

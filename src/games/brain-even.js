@@ -5,16 +5,15 @@ const gameDescription = 'Answer "yes" if number is even, otherwise answer "no"';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
 const getData = () => {
   const randomNum = _.random(1, 100);
-  const rightAnswer = isEven(randomNum);
+  const rightAnswer = isEven(randomNum) ? 'yes' : 'no';
   return [rightAnswer, randomNum];
 };
 
-const brainEven = () => generateGame(gameDescription, getData);
-export default brainEven;
+export default () => generateGame(gameDescription, getData);

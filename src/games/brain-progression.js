@@ -30,5 +30,4 @@ export const getData = () => {
   return [rightAnswer, progression];
 };
 
-const brainProgression = () => generateGame(gameDescription, getData);
-export default brainProgression;
+export default () => generateGame(gameDescription, getData);

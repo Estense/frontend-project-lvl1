@@ -4,14 +4,13 @@ import generateGame from '../index.js';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGreatesDividor = (operand1, operand2) => {
-  let result = 0;
   const counter = operand2 > operand1 ? operand2 : operand1;
-  for (let i = 1; i <= counter; i += 1) {
+  for (let i = counter; i > 0; i -= 1) {
     if ((operand1 % i === 0) && (operand2 % i === 0)) {
-      result = i;
+      return i;
     }
   }
-  return result;
+  return new Error('Given numbers is incorrect!');
 };
 
 const getData = () => {
@@ -22,5 +21,4 @@ const getData = () => {
   return [rightAnswer, operands];
 };
 
-const brainGcd = () => generateGame(gameDescription, getData);
-export default brainGcd;
+export default () => generateGame(gameDescription, getData);

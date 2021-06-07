@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
-import sayHello from './cli.js';
 
 // Games engine
-const roundCounter = 3;
+const roundsToWin = 3;
 const generateGame = (gameDescription, getData) => {
-  const playerName = sayHello();
+  console.log('Welcome to the Brain Games!');
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
   console.log(gameDescription);
-  for (let i = 0; i < roundCounter; i += 1) {
+  for (let i = 0; i < roundsToWin; i += 1) {
     const [rightAnswer, questionBody] = getData();
     const answer = readlineSync.question(`Question: ${questionBody}\n`);
     if (answer !== rightAnswer) {
