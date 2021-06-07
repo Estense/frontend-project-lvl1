@@ -5,21 +5,20 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 
 const isPrime = (num) => {
   if (num <= 1) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const getData = () => {
   const num = _.random(0, 1000);
-  const rightAnswer = isPrime(num);
-  return [rightAnswer.toString(), num];
+  const rightAnswer = isPrime(num) ? 'yes': 'no';
+  return [rightAnswer, num];
 };
 
-const brainPrime = () => generateGame(gameDescription, getData);
-export default brainPrime;
+export default () => generateGame(gameDescription, getData);
