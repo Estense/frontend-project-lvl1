@@ -10,7 +10,10 @@ const findGreatesDividor = (operand1, operand2) => {
       return i;
     }
   }
+<<<<<<< HEAD
   return new Error('Given numbers is incorrect!');
+=======
+>>>>>>> dc7f1dbdfccff9b890267968af31c6d66a422513
 };
 
 const getData = () => {

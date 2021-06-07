@@ -16,9 +16,15 @@ const isPrime = (num) => {
 };
 
 const getData = () => {
+<<<<<<< HEAD
   const randomNum = _.random(0, 1000);
   const rightAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [rightAnswer, randomNum];
+=======
+  const num = _.random(0, 1000);
+  const rightAnswer = isPrime(num) ? 'yes': 'no';
+  return [rightAnswer, num];
+>>>>>>> dc7f1dbdfccff9b890267968af31c6d66a422513
 };
 
 export default () => generateGame(gameDescription, getData);
